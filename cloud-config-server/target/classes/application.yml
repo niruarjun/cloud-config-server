@@ -1,0 +1,12 @@
+spring:  application:    name: Config-Server
+  cloud:    config:      server:        git:          uri: https://github.com/Manhibushan/config-server
+server:
+    port: 8182
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost   
